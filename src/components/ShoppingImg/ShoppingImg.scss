@@ -1,0 +1,54 @@
+.ShoppingImg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    .big-img-wrap {
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .mini-img-wrap {
+        li {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 0, 0);
+            transition: all 0.3s;
+            &.active {
+                border: 3px solid skyblue;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .btn-wrap {
+        width: 50px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 491px;
+        bottom: 70px;
+        > div {
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
