@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './ShoppingImg.scss';
 import ShoppingMini from './ShoppingMini';
-const ShoppingImg = ({ data, img, title, prev, next }) => {
+const ShoppingImg = ({ data, img, title, prev, next, changeOnData }) => {
     return (
         <div className='ShoppingImg'>
             <div className='big-img-wrap'>
@@ -9,7 +9,7 @@ const ShoppingImg = ({ data, img, title, prev, next }) => {
             </div>
             <ul className='mini-img-wrap'>
                 {data.map((item) => (
-                    <ShoppingMini key={item.id} item={item} />
+                    <ShoppingMini key={item.id} item={item} changeOnData={changeOnData} />
                 ))}
             </ul>
             <div className='btn-wrap'>
