@@ -91,7 +91,6 @@ const Shopping = () => {
 
     useEffect(() => {
         changeOnData(cnt);
-        console.log('실행');
     }, [cnt]);
 
     return (
